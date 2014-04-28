@@ -6,10 +6,13 @@ public class PowerUp1 : MonoBehaviour {
 	public GameObject hero;
 	public HeroMovement heroScript;
 	public string buffText = "6 sec boost to kill enemies!\r\nI'TS ALREADY STARTED!!\r\nPress any directional key to use >.<";
-	public string emptyText = "";
+
+
+
 	void Start () {
 		hero = GameObject.FindGameObjectWithTag ("Hero");
 		heroScript = hero.GetComponent<HeroMovement> ();
+
 	}
 	
 
@@ -17,10 +20,11 @@ public class PowerUp1 : MonoBehaviour {
 	void Update () {
 	}
 	
+
 	IEnumerator OnTriggerEnter2D(Collider2D trigger){
-		
+
 		if (trigger.gameObject.tag == "Hero") {
-						
+				
 			heroScript.moveSpeed = 10.0f;
 			//Debug.Log ("YES");
 			yield return new WaitForSeconds (6.0f);
@@ -29,18 +33,8 @@ public class PowerUp1 : MonoBehaviour {
 			}
 	}
 
-	IEnumerator OnGUI(Collider2D trigger) {
-		GUI.color = Color.blue;
-		GUI.TextField(new Rect(10,10,250,160), emptyText);
 
-		//color
-
-
-			
-		}
-		
-		
-}	
+	}
 
 
 
