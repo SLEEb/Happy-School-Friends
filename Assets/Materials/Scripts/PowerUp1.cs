@@ -26,6 +26,7 @@ public class PowerUp1 : MonoBehaviour {
 		if (trigger.gameObject.tag == "Hero") {
 				
 			heroScript.moveSpeed = 10.0f;
+			Destroy(gameObject);
 			//Debug.Log ("YES");
 			yield return new WaitForSeconds (6.0f);
 			heroScript.moveSpeed = 2.2f;
