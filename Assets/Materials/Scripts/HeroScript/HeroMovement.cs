@@ -8,15 +8,17 @@ public class HeroMovement : MonoBehaviour {
 	public int score;
 	public string scoreText = "Score: 0";
 	public GUISkin guiSkin; 
+	//public string buffText = "6 sec boost to kill enemies!\r\nI'TS ALREADY STARTED!!\r\nPress any directional key to use >.<";
+	//public string buffTextEmpty = "";
+
 	bool ifLeftIsPressed = false;
 	bool ifRightIsPressed = false;
 	bool ifUpIsPressed = false;
     bool ifDownIsPressed = false;
 
-
 	void OnGUI(){
 		GUI.color = Color.yellow;
-		GUI.Box(new Rect(10,10,100,90), scoreText);
+		GUI.Box(new Rect(10,10,200,80), scoreText);
 
 		}
 	// Use this for initialization
@@ -75,13 +77,12 @@ public class HeroMovement : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D col){
 		if (col.tag == "Points") { 
-		
-		Debug.Log ("Other object is a coin");
 		score += 1; 
 		scoreText = "Score: " + score;
-		Debug.Log ("Score is now " + score);
+	
 		Destroy (col.gameObject);
 		}
+
 		}
 
 
