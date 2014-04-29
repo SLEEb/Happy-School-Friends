@@ -5,7 +5,7 @@ public class PowerUp1 : MonoBehaviour {
 	
 	public GameObject hero;
 	public HeroMovement heroScript;
-	public string buffText = "6 sec boost to kill enemies!\r\nI'TS ALREADY STARTED!!\r\nPress any directional key to use >.<";
+	// public string buffText = "6 sec boost to kill enemies!\r\nI'TS ALREADY STARTED!!\r\nPress any directional key to use >.<";
 
 
 
@@ -26,10 +26,11 @@ public class PowerUp1 : MonoBehaviour {
 		if (trigger.gameObject.tag == "Hero") {
 				
 			heroScript.moveSpeed = 10.0f;
-			Destroy(gameObject);
+
 			//Debug.Log ("YES");
 			yield return new WaitForSeconds (6.0f);
 			heroScript.moveSpeed = 2.2f;
+			Destroy(gameObject);
            // Debug.Log ("NOOOO!");
 			}
 	}

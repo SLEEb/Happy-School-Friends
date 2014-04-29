@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Points
-  m_TagString: Untagged
+  m_TagString: Points
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b44b8c1fa2128d4a9e9c609c047f1aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e9edc526c186a74abbe2b79a7994208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hero: {fileID: 0}

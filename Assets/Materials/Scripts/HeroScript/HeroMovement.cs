@@ -5,12 +5,20 @@ public class HeroMovement : MonoBehaviour {
 
 	public float moveSpeed;
 	public float msBuff;
+	public int score;
+	public string scoreText = "Score: 0";
+	public GUISkin guiSkin; 
+	bool ifLeftIsPressed = false;
+	bool ifRightIsPressed = false;
+	bool ifUpIsPressed = false;
+    bool ifDownIsPressed = false;
 
-	 bool ifLeftIsPressed = false;
-	 bool ifRightIsPressed = false;
-	 bool ifUpIsPressed = false;
-     bool ifDownIsPressed = false;
 
+	void OnGUI(){
+		GUI.color = Color.yellow;
+		GUI.Box(new Rect(10,10,100,90), scoreText);
+
+		}
 	// Use this for initialization
 	void Start () {
 		moveSpeed = 2.2f;
@@ -63,6 +71,17 @@ public class HeroMovement : MonoBehaviour {
 		//Debug.Log(moveSpeed);
 
 
+		}
+
+	void OnTriggerEnter2D (Collider2D col){
+		if (col.tag == "Points") { 
+		
+		Debug.Log ("Other object is a coin");
+		score += 1; 
+		scoreText = "Score: " + score;
+		Debug.Log ("Score is now " + score);
+		Destroy (col.gameObject);
+		}
 		}
 
 
