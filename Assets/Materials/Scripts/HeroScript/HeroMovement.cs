@@ -8,8 +8,10 @@ public class HeroMovement : MonoBehaviour {
 	public int score;
 	public string scoreText = "Score: 0";
 	public GUISkin guiSkin; 
-	//public string buffText = "6 sec boost to kill enemies!\r\nI'TS ALREADY STARTED!!\r\nPress any directional key to use >.<";
-	//public string buffTextEmpty = "";
+	public int lives = 3;
+	public string livesText = "Lives: 3";
+
+	public GameObject nme;
 
 	bool ifLeftIsPressed = false;
 	bool ifRightIsPressed = false;
@@ -18,12 +20,14 @@ public class HeroMovement : MonoBehaviour {
 
 	void OnGUI(){
 		GUI.color = Color.yellow;
-		GUI.Box(new Rect(10,10,200,80), scoreText);
+		GUI.Box(new Rect(10,10,200,80), scoreText + livesText);
 
 		}
 	// Use this for initialization
 	void Start () {
+		lives = 3;
 		moveSpeed = 2.2f;
+		nme = GameObject.FindGameObjectWithTag ("Enemy1");
 
 		}
 
@@ -85,8 +89,33 @@ public class HeroMovement : MonoBehaviour {
 
 		}
 
+	void OnCollisionEnter2D (Collision2D nme1) {
+
+		if (nme1.gameObject.tag == "Enemy1" && lives >= 1) {
+						//Debug.Log("Hej");
+						lives -= 1;
+						livesText = "Lives: " + lives; 
+				} 
+		else if (nme1.gameObject.tag == "Enemy1" && lives == 0) {
+			Destroy(gameObject);
+		}
+	
 
 	}
+
+}
+
+
+
+
+	
+	
+
+
+
+
+	
+
 
 
 

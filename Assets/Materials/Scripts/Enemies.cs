@@ -16,7 +16,7 @@ public class Enemies : MonoBehaviour {
 	}
 	void OnCollisionEnter2D (Collision2D trigger){
 		if (trigger.gameObject.tag == "Hero") {
-			Destroy(hero);
+			Destroy(gameObject);
 				}
 
 		}
