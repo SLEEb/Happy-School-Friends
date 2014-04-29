@@ -1,0 +1,9 @@
+digraph "C:/Users/Grimzorn/Desktop/Dogeman/Assets/Editor/Doxygen" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_a61728ed8d39ae932c553f4837da35dd {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Editor" fontname="Helvetica", fontsize="10", URL="dir_a61728ed8d39ae932c553f4837da35dd.html"]
+  dir_38c0671d8e669cdaf9fe4d0c8e0456be [shape=box, label="Doxygen", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_38c0671d8e669cdaf9fe4d0c8e0456be.html"];
+  }
+}

@@ -1,0 +1,11 @@
+digraph "C:/Users/Grimzorn/Desktop/Dogeman/Assets" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_84bbf7b3c7f28a5a18725745e1505219 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_84bbf7b3c7f28a5a18725745e1505219.html"];
+    dir_84bbf7b3c7f28a5a18725745e1505219 [shape=plaintext label="Assets"];
+    dir_a61728ed8d39ae932c553f4837da35dd [shape=box label="Editor" color="red" fillcolor="white" style="filled" URL="dir_a61728ed8d39ae932c553f4837da35dd.html"];
+    dir_8cffd98c37fbe80da2899964988c42ca [shape=box label="Materials" color="red" fillcolor="white" style="filled" URL="dir_8cffd98c37fbe80da2899964988c42ca.html"];
+  }
+}

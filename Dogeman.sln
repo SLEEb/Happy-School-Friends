@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{6E262959-4602-D9A2-0B5A-BB2587E1F3C2}") = "Dogeman", "Assembly-CSharp.csproj", "{AB7A7B0C-5E20-BAD5-F5D7-D797CAA57C12}"
 EndProject
+Project("{6E262959-4602-D9A2-0B5A-BB2587E1F3C2}") = "Dogeman", "Assembly-CSharp-Editor.csproj", "{AA205A48-A4BD-308A-30CE-B97DD73223FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,11 +15,15 @@ Global
 		{AB7A7B0C-5E20-BAD5-F5D7-D797CAA57C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB7A7B0C-5E20-BAD5-F5D7-D797CAA57C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB7A7B0C-5E20-BAD5-F5D7-D797CAA57C12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA205A48-A4BD-308A-30CE-B97DD73223FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA205A48-A4BD-308A-30CE-B97DD73223FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA205A48-A4BD-308A-30CE-B97DD73223FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA205A48-A4BD-308A-30CE-B97DD73223FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																								GlobalSection(MonoDevelopProperties) = preSolution
+																																																														GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

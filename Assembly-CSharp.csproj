@@ -50,6 +50,8 @@
      <Compile Include="Assets\Materials\Scripts\HeroScript\HeroMovement.cs" />
      <Compile Include="Assets\Materials\Scripts\PointCol.cs" />
      <Compile Include="Assets\Materials\Scripts\PowerUp1.cs" />
+     <None Include="Assets\Editor\Doxygen\Resources\BaseDoxyfile.txt" />
+     <None Include="Assets\Editor\Doxygen\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

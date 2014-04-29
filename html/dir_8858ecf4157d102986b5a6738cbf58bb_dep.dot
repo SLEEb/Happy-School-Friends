@@ -1,0 +1,13 @@
+digraph "C:/Users/Grimzorn/Desktop/Dogeman/Assets/Materials/Scripts" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_8cffd98c37fbe80da2899964988c42ca {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Materials" fontname="Helvetica", fontsize="10", URL="dir_8cffd98c37fbe80da2899964988c42ca.html"]
+  subgraph clusterdir_8858ecf4157d102986b5a6738cbf58bb {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_8858ecf4157d102986b5a6738cbf58bb.html"];
+    dir_8858ecf4157d102986b5a6738cbf58bb [shape=plaintext label="Scripts"];
+    dir_9e11510f4e254357b60c900d0b98925b [shape=box label="HeroScript" color="black" fillcolor="white" style="filled" URL="dir_9e11510f4e254357b60c900d0b98925b.html"];
+  }
+  }
+}
