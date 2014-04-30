@@ -9,7 +9,7 @@ public class Enemies : MonoBehaviour {
  
 	// Use this for initialization
 	void Start () {
-		hero = GameObject.FindGameObjectWithTag ("Hero");
+		hero = GameObject.FindGameObjectWithTag ("Hero"); // hero is set to the tag of an GameObject
 	
 		}
 	
@@ -18,8 +18,8 @@ public class Enemies : MonoBehaviour {
 
 		}
 
-	void OnTriggerEnter2D (Collider2D trigger){
-		if (trigger.gameObject.tag == "Hero") {
+	void OnTriggerEnter2D (Collider2D trigger){ // Trigger function, checks if Enemies (the script is attached to the prefabs called EnemyCaucasian, EnemyBlackalictios, EnemyChinese, EnemyGinger 
+		if (trigger.gameObject.tag == "Hero") { // If they collide this will Destroy the Enemy
 			Destroy(gameObject);
 				}
 

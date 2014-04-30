@@ -7,12 +7,8 @@ public class PointCol : MonoBehaviour {
 	
 	
 	// Use this for initialization
-	void OnGUI()
-	{
-	}
-	
 	void Start () {
-		
+
 		hero = GameObject.FindGameObjectWithTag ("Hero");
 	}
 	
@@ -21,7 +17,7 @@ public class PointCol : MonoBehaviour {
 		
 	}
 	
-	void OnTriggerEnter2D (Collider2D trigger){
+	void OnTriggerEnter2D (Collider2D trigger){ // Trigger which is attached to Points, will destroy coin if colliding with Hero.
 		
 		if(trigger.gameObject.tag == "Hero"){
 			Destroy(gameObject);
