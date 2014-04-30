@@ -5,12 +5,17 @@ public class HeroMovement : MonoBehaviour {
 
 	public float moveSpeed;
 	public float msBuff;
+
 	public int score;
 	public string scoreText = "Score: 0";
-	public GUISkin guiSkin; 
+	public bool immortal = false;
 	public int lives = 3;
 	public string livesText = "Lives: 3";
 
+	public string buffText;
+	public string buffTextEmpty;
+
+	public GameObject pwr;
 	public GameObject nme;
 
 	bool ifLeftIsPressed = false;
@@ -21,20 +26,27 @@ public class HeroMovement : MonoBehaviour {
 	void OnGUI(){
 		GUI.color = Color.yellow;
 		GUI.Box(new Rect(10,10,200,80), scoreText + livesText);
-
+		GUI.contentColor = Color.red;
+		GUI.color = Color.red;
+		GUI.contentColor = Color.yellow;
+		GUI.Box(new Rect(10,90,215,110), buffText);
 		}
 	// Use this for initialization
 	void Start () {
-		lives = 3;
-		moveSpeed = 2.2f;
-		nme = GameObject.FindGameObjectWithTag ("Enemy1");
 
+
+		lives = 3;
+		buffText = " ";
+		moveSpeed = 3.2f;
+		nme = GameObject.FindGameObjectWithTag ("Enemy1");
+		pwr = GameObject.FindGameObjectWithTag ("PowerUp");
 		}
 
 	// Update is called once per frame
 	 void Update () {
 
-	
+
+
 	// Movement
 		
 		// Left
@@ -74,47 +86,49 @@ public class HeroMovement : MonoBehaviour {
 		else if (Input.GetKeyUp (KeyCode.DownArrow)) {
 			ifDownIsPressed = false;
 		}
-		//Debug.Log(moveSpeed);
-
+	
 
 		}
 
-	void OnTriggerEnter2D (Collider2D col){
+	IEnumerator OnTriggerEnter2D (Collider2D col){
+
 		if (col.tag == "Points") { 
 		score += 1; 
 		scoreText = "Score: " + score;
-	
 		Destroy (col.gameObject);
 		}
 
-		}
-
-	void OnCollisionEnter2D (Collision2D nme1) {
-
-		if (nme1.gameObject.tag == "Enemy1" && lives >= 1) {
-						//Debug.Log("Hej");
-						lives -= 1;
-						livesText = "Lives: " + lives; 
-				} 
-		else if (nme1.gameObject.tag == "Enemy1" && lives == 0) {
+		if (col.gameObject.tag == "PowerUp") {
+		
+			buffText = "6 sec boost to kill enemies!\r\nI'TS ALREADY STARTED!!\r\nPress any directional key to use >.<";
+			moveSpeed = 10.0f;
+			immortal = true;
+	
+			yield return new WaitForSeconds (6.0f);
+			Destroy(col.gameObject);
+			immortal = false;
+			moveSpeed = 3.2f;
+			buffText = "";
+			}
+	
+		if (col.gameObject.tag == "Enemy1" && lives >= 1 && immortal != true) {
+			lives -= 1;
+			livesText = "Lives: " + lives; 
+		} 
+		else if (col.gameObject.tag == "Enemy1" && lives == 0) {
 			Destroy(gameObject);
 		}
-	
+		if (col.gameObject.tag == "Enemy1" && immortal == true) {
+			lives += 0;
+			livesText = "Lives: " + lives; 
+		}
+
+
+		}
+
+
 
 	}
-
-}
-
-
-
-
-	
-	
-
-
-
-
-	
 
 
 
